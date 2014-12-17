@@ -5,6 +5,7 @@ import time
 
 
 def main(url):
+    print("Loading %s" % url)
     soup = BeautifulSoup(urlopen(url))
     tags = soup.find("div", id="sitemap_content").findAll("a")
     links = []
